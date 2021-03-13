@@ -6,6 +6,7 @@ using UnityEngine;
 public class Liquid : MonoBehaviour
 {
     public MeshFilter meshFilter;
+    public MeshRenderer meshRenderer;
     public GameObject cup;
     public float fill_amount = 0.5f;
 
@@ -56,25 +57,38 @@ public class Liquid : MonoBehaviour
     }
 
     void Update() {
-        this.UpdateVerticies();    
+        // Check if liduid is visible
+        if (this.fill_amount <= 0.01) {
+            this.meshRenderer.enabled = false;
+        }
+        else {
+            if (this.meshRenderer.enabled == false) {
+                this.meshRenderer.enabled = true;
+            }
+            // Check for updates 
+            this.UpdateVerticies();
+        }
     }
 
 
-    public void AddLiquid(Color color) {
+    public void AddLiquid(Color color, float fill_speed) {
         // Check last time of update 
         this.timer += Time.deltaTime;
 
         // Add some liquid to this cup 
         if(this.fill_amount < 1f && this.timer > this.wait_time) {
+            // Normolise fill speed 
+            fill_speed *= 0.02f;
+
             // Update the amount of liquid 
-            this.fill_amount += 0.01f;
+            this.fill_amount += fill_speed;
             this.timer = 0f;
 
             // Update the color of the liquid 
             Material mat = gameObject.GetComponent<Renderer>().material;
 
             Color current_col = mat.color;
-            Color new_col = BlendColors(current_col, color, 0.01f);
+            Color new_col = BlendColors(current_col, color, fill_speed);
 
             mat.SetColor("_Color", new_col);
 
@@ -84,16 +98,9 @@ public class Liquid : MonoBehaviour
 
     Color BlendColors(Color current_col, Color new_color, float new_liquid) {
         // Calculate the percentages for each color 
-        float old_percentage = (this.fill_amount - new_liquid) / this.fill_amount;
         float new_percentage = (new_liquid) / this.fill_amount;
 
-        // Calculate new color value 
-        float r = (new_color.r * new_percentage) + (current_col.r * old_percentage);
-        float g = (new_color.g * new_percentage) + (current_col.g * old_percentage);
-        float b = (new_color.b * new_percentage) + (current_col.b * old_percentage);
-        float a = (new_color.a);
-
-        return new Color(r, g, b, a);
+        return Color.Lerp(current_col, new_color, new_percentage);
     }
 
     void UpdateVerticies() {

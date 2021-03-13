@@ -808,8 +808,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshFilter: {fileID: 9015253128795415183}
+  meshRenderer: {fileID: 9015253128795415176}
   cup: {fileID: 9015253129286786010}
-  fill_amount: 0.25
+  fill_amount: 0.01
 --- !u!1 &9015253129286786010
 GameObject:
   m_ObjectHideFlags: 0

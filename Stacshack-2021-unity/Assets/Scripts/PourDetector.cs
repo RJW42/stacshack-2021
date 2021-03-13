@@ -20,7 +20,9 @@ public class PourDetector : MonoBehaviour {
 
     void Update() {
         // Check if we are pouring 
-        bool pour_check = this.CalculatePourAngle() < this.pourThreshold;
+        float pour_angle = this.CalculatePourAngle();
+
+        bool pour_check = pour_angle < this.pourThreshold;
 
         // Start or stop pouring 
         if(this.isPouring != pour_check) {
@@ -32,6 +34,11 @@ public class PourDetector : MonoBehaviour {
             else {
                 this.EndPour();
             }
+        }
+
+        // Update the pourning angle 
+        if (this.isPouring) {
+            this.currentStream.SetPourAngle(pour_angle);
         }
     }
 

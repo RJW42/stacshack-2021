@@ -12,6 +12,7 @@ public class Stream : MonoBehaviour {
     private Coroutine pourRoutine = null;
     private Vector3 targetPosition = Vector3.zero;
     private Color color;
+    private float pour_speed;
 
     void Awake() {
         // Called on instantion 
@@ -85,8 +86,11 @@ public class Stream : MonoBehaviour {
 
         // Check if ray cast hit is a liquid 
         if (hit.collider && hit.transform.gameObject.GetComponent<Liquid>()) {
+            // Calculate the fill percentage 
+
+
             // Add to the cups liquid 
-            hit.transform.gameObject.GetComponent<Liquid>().AddLiquid(this.color);
+            hit.transform.gameObject.GetComponent<Liquid>().AddLiquid(this.color, pour_speed);
         }
 
         return endPoint;
@@ -118,5 +122,11 @@ public class Stream : MonoBehaviour {
 
             yield return null;
         }
+    }
+
+    public void SetPourAngle(float pour_angle) {
+        // Calculate the pour speed 
+         this.pour_speed = (45 - pour_angle) / 120;
+        
     }
 }
