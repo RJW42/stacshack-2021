@@ -134,6 +134,7 @@ MonoBehaviour:
   streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
     type: 3}
   liquid_color: {r: 0, g: 1, b: 0.24240112, a: 1}
+  isPoisen: 0
 --- !u!54 &1090405319
 Rigidbody:
   m_ObjectHideFlags: 0
