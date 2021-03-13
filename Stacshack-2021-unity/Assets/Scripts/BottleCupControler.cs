@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class BottleCupControler : ItemController {
     public float rotate_speed = 2f;
+    public float start_x = -90;
+    public float start_y = 90;
+    public float start_z = 90; 
 
     bool script_enabled = false;
-    Quaternion start_rotation;
 
-
-    void Start() {
-        this.start_rotation = transform.rotation;
-    }
     
     void Update() {
         // Check if enabled 
@@ -24,23 +22,24 @@ public class BottleCupControler : ItemController {
         // Check for inputs 
         if (Input.GetKey(KeyCode.R)) {
             // Rotate Left 
-            transform.Rotate(0, 45 * rotate_speed * Time.deltaTime, 0);
+            transform.Rotate(0, -45 * rotate_speed * Time.deltaTime, 0);
         }
         
         if(Input.GetKey(KeyCode.F)) {
             // Rotate Right 
-            transform.Rotate(0, -45 * rotate_speed * Time.deltaTime, 0);
+            transform.Rotate(0, 45 * rotate_speed * Time.deltaTime, 0);
         }
 
-        if(Input.GetKeyDown(KeyCode.C)) {
-            // Reset rotation 
-            transform.rotation = this.start_rotation;
+        if (Input.GetKey(KeyCode.C)) {
+            this.transform.localRotation = Quaternion.Euler(start_x, start_y, start_z);
         }
     }
 
 
     override public void Enable() {
         this.script_enabled = true;
+
+        this.transform.localRotation = Quaternion.Euler(start_x, start_y, start_z);
     }
 
     override public void Disable() {
