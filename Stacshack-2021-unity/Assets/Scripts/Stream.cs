@@ -13,6 +13,7 @@ public class Stream : MonoBehaviour {
     private Vector3 targetPosition = Vector3.zero;
     private Color color;
     private float pour_speed;
+    private bool isPoisen;
 
     void Awake() {
         // Called on instantion 
@@ -37,6 +38,10 @@ public class Stream : MonoBehaviour {
 
         // Set this color 
         this.color = color;
+    }
+
+    public void SetPoisen(bool isPoisen) {
+        this.isPoisen = isPoisen;
     }
 
     public void Begin() {

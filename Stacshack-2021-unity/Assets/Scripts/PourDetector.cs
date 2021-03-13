@@ -7,6 +7,7 @@ public class PourDetector : MonoBehaviour {
     public Transform origin = null;
     public GameObject streamPrefab = null;
     public Color liquid_color;
+    public bool isPoisen = false;
 
     private bool isPouring = false;
     private Stream currentStream = null;
@@ -47,6 +48,7 @@ public class PourDetector : MonoBehaviour {
         currentStream = CreateStream();
         currentStream.Begin();
         currentStream.SetColor(this.liquid_color);
+        currentStream.SetPoisen(this.isPoisen);
     }
 
 
