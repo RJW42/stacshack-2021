@@ -85,12 +85,9 @@ public class Stream : MonoBehaviour {
         Vector3 endPoint = hit.collider ? hit.point : ray.GetPoint(flow_distance);
 
         // Check if ray cast hit is a liquid 
-        if (hit.collider && hit.transform.gameObject.GetComponent<Liquid>()) {
-            // Calculate the fill percentage 
-
-
+        if (hit.collider && hit.transform.gameObject.GetComponentInChildren<Liquid>()) {
             // Add to the cups liquid 
-            hit.transform.gameObject.GetComponent<Liquid>().AddLiquid(this.color, pour_speed);
+            hit.transform.gameObject.GetComponentInChildren<Liquid>().AddLiquid(this.color, pour_speed);
         }
 
         return endPoint;
