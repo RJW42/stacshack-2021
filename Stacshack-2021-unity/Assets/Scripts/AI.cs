@@ -12,6 +12,7 @@ using UnityEngine;
 
     public Transform idle_location;
     public Transform order_location;
+    public GameObject locationManager;
 
     public MoveTo moveTo;
     public GameObject barManger;
@@ -26,8 +27,10 @@ using UnityEngine;
         // Set state to moving 
         this.current_state = AIStateType.moving;
 
+        // Get free idle location
+
         // Move to idle location
-        this.Move(idle_location, AIStateType.idle);
+        this.Move(this.locationManager.GetComponent<LocationController>().getIdleLocation(), AIStateType.idle);
     }
 
     // Update is called once per frame
