@@ -86,9 +86,6 @@ public class Stream : MonoBehaviour {
 
         // Check if ray cast hit is a liquid 
         if (hit.collider && hit.transform.gameObject.GetComponentInChildren<Liquid>()) {
-            // Calculate the fill percentage 
-            print("hello world");
-
             // Add to the cups liquid 
             hit.transform.gameObject.GetComponentInChildren<Liquid>().AddLiquid(this.color, pour_speed);
         }

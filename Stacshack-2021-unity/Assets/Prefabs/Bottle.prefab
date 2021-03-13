@@ -181,6 +181,9 @@ MonoBehaviour:
   player: {fileID: 0}
   objectContainer: {fileID: 0}
   fpsCam: {fileID: 0}
+  player_camera: {fileID: 0}
+  highlight_mesh: {fileID: 3324152393074868264}
+  highlight_material: {fileID: 2100000, guid: 1ce0fc454633cd14093e74e5d9001979, type: 2}
   pickUpRange: 2
   equipped: 0
 --- !u!114 &1090405326

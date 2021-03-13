@@ -2357,8 +2357,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.8, z: 4}
-  m_Center: {x: -2, y: 0.4, z: 0}
+  m_Size: {x: 4, y: 4, z: 4}
+  m_Center: {x: -2, y: 2, z: 0}
 --- !u!114 &7445275861563299805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2377,6 +2377,9 @@ MonoBehaviour:
   player: {fileID: 0}
   objectContainer: {fileID: 0}
   fpsCam: {fileID: 0}
+  player_camera: {fileID: 0}
+  highlight_mesh: {fileID: 9015253129286786015}
+  highlight_material: {fileID: 2100000, guid: 1ce0fc454633cd14093e74e5d9001979, type: 2}
   pickUpRange: 2
   equipped: 0
 --- !u!114 &24749163

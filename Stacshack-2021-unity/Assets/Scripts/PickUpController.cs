@@ -7,12 +7,18 @@ public class PickUpController : MonoBehaviour {
     public Rigidbody rb;
     public BoxCollider coll;
     public Transform player, objectContainer, fpsCam;
+    public Camera player_camera;
+    public MeshRenderer highlight_mesh;
+    public Material highlight_material;
 
     public float pickUpRange;
 
     public bool equipped;
     public static bool slotFull;
 
+
+    bool highlited = false;
+    Color old_material_color;
 
     void Start() {
         if (!equipped) {
@@ -32,8 +38,38 @@ public class PickUpController : MonoBehaviour {
         // Check if player is in range and "E" pressed. Picking up item 
         Vector3 distnace_to_player = player.position - transform.position;
 
-        if(!equipped && distnace_to_player.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E) && !slotFull) {
-            PickUp();
+        if(!equipped && distnace_to_player.magnitude <= pickUpRange && !slotFull) {
+            // Cast ray from player camera and see if it hits this object 
+            RaycastHit hit;
+            Ray ray = player_camera.ScreenPointToRay(Input.mousePosition);
+
+            if(Physics.Raycast(ray, out hit)) {
+                if(hit.transform == transform) {
+                    // Player is looking at this object 
+                    if (!highlited) {
+                        this.highlited = true;
+                        this.old_material_color = this.highlight_mesh.materials[0].color;
+                        this.highlight_mesh.materials[0].color = highlight_material.color;
+                    }
+
+                    // Player picked up this object 
+                    if (Input.GetKeyDown(KeyCode.E)) {
+                        // Unhighlight
+                        this.highlited = false;
+                        this.highlight_mesh.materials[0].color = old_material_color;
+                        PickUp();
+                    }
+                }
+            }
+            else if(highlited){
+                // Unhighlight 
+                this.highlited = false;
+                this.highlight_mesh.materials[0].color = old_material_color;
+            }
+        } else if(highlited) {
+            // Unhighlight 
+            this.highlited = false;
+            this.highlight_mesh.materials[0].color = old_material_color;
         }
 
 
