@@ -13,9 +13,10 @@ using UnityEngine;
     public float time_between_gulps = 2f;
     public float time_of_last_gulp = 0f;
 
-    public Transform idle_location;
     public Transform order_location;
     public Transform deposite_location;
+    public GameObject locationManager;
+
 
     public MoveTo moveTo;
     public GameObject barManger;
@@ -33,8 +34,10 @@ using UnityEngine;
         // Set state to moving 
         this.current_state = AIStateType.moving;
 
+        // Get free idle location
+
         // Move to idle location
-        this.Move(idle_location, AIStateType.idle);
+        this.Move(this.locationManager.GetComponent<LocationController>().getIdleLocation(), AIStateType.idle);
     }
 
 
@@ -180,7 +183,7 @@ using UnityEngine;
         this.drink = drink;
 
         // Move back to idle 
-        this.Move(idle_location, AIStateType.idle);
+        this.Move(this.locationManager.GetComponent<LocationController>().getIdleLocation(), AIStateType.idle);
     }
 
     void DepositDrink() {
@@ -203,12 +206,12 @@ using UnityEngine;
             }
             else {
                 // Can't so return to idle 
-                this.Move(this.idle_location, AIStateType.idle);
+                this.Move(this.locationManager.GetComponent<LocationController>().getIdleLocation(), AIStateType.idle);
             }
         }
         else {
             // Not thirsty so idle
-            this.Move(this.idle_location, AIStateType.idle);
+            this.Move(this.locationManager.GetComponent<LocationController>().getIdleLocation(), AIStateType.idle);
         }
     }
 
