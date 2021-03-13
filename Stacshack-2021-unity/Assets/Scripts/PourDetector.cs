@@ -11,6 +11,13 @@ public class PourDetector : MonoBehaviour {
     private bool isPouring = false;
     private Stream currentStream = null;
 
+
+    void Start() {
+        // Set the color of the bottle 
+        this.SetColor();
+    }
+
+
     void Update() {
         // Check if we are pouring 
         bool pour_check = this.CalculatePourAngle() < this.pourThreshold;
@@ -52,5 +59,14 @@ public class PourDetector : MonoBehaviour {
         GameObject streamObject = Instantiate(streamPrefab, origin.position, Quaternion.identity, transform);
 
         return streamObject.GetComponent<Stream>();
+    }
+
+    public void SetColor() {
+        // Get the material of the bottle logo color 
+        MeshRenderer mesh_renderer = GetComponent<MeshRenderer>();
+        Material mat = mesh_renderer.materials[2];
+
+        // Update the mats color 
+        mat.SetColor("_Color", this.liquid_color);
     }
 }

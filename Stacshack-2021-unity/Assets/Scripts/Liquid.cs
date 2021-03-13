@@ -120,8 +120,5 @@ public class Liquid : MonoBehaviour
         // Get the parents transform 
         Transform cup_transform = this.cup.GetComponent<Transform>();
 
-        // Get the inverse rotation of the cup 
-        print(cup_transform.rotation.eulerAngles);
-
     }
 }
