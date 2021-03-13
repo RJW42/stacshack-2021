@@ -60,6 +60,11 @@ public class PickUpController : MonoBehaviour {
                         PickUp();
                     }
                 }
+                else if (highlited) {
+                    // Unhighlight 
+                    this.highlited = false;
+                    this.highlight_mesh.materials[0].color = old_material_color;
+                }
             }
             else if(highlited){
                 // Unhighlight 
