@@ -92,7 +92,7 @@ public class Stream : MonoBehaviour {
         // Check if ray cast hit is a liquid 
         if (hit.collider && hit.transform.gameObject.GetComponentInChildren<Liquid>()) {
             // Add to the cups liquid 
-            hit.transform.gameObject.GetComponentInChildren<Liquid>().AddLiquid(this.color, pour_speed);
+            hit.transform.gameObject.GetComponentInChildren<Liquid>().AddLiquid(this.color, pour_speed, isPoisen);
         }
 
         return endPoint;

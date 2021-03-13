@@ -9,6 +9,7 @@ public class Liquid : MonoBehaviour
     public MeshRenderer meshRenderer;
     public GameObject cup;
     public float fill_amount = 0.5f;
+    public bool isPoisen = false;
 
     float max_height = -1f;
     float radious = 0.25f;
@@ -17,6 +18,8 @@ public class Liquid : MonoBehaviour
     float timer = 0f; 
 
     Vector4[] top_verticies;
+
+    ParticleSystem poisenParticles;
 
     void Start(){
         // Get the cup height 
@@ -71,7 +74,12 @@ public class Liquid : MonoBehaviour
     }
 
 
-    public void AddLiquid(Color color, float fill_speed) {
+    public void AddLiquid(Color color, float fill_speed, bool isPoisen) {
+        // Update if the drink is poisen
+        if (!this.isPoisen) {
+            this.isPoisen = isPoisen;
+        }
+
         // Check last time of update 
         this.timer += Time.deltaTime;
 
@@ -91,8 +99,6 @@ public class Liquid : MonoBehaviour
             Color new_col = BlendColors(current_col, color, fill_speed);
 
             mat.SetColor("_Color", new_col);
-
-
         }
     }
 
