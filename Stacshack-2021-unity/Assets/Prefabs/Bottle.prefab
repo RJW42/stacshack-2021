@@ -129,4 +129,4 @@ MonoBehaviour:
   origin: {fileID: 530155297}
   streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
     type: 3}
-  liquid_color: {r: 1, g: 0, b: 0, a: 1}
+  liquid_color: {r: 0, g: 1, b: 0.24240112, a: 1}

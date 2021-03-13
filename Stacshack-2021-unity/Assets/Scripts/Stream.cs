@@ -11,6 +11,7 @@ public class Stream : MonoBehaviour {
 
     private Coroutine pourRoutine = null;
     private Vector3 targetPosition = Vector3.zero;
+    private Color color;
 
     void Awake() {
         // Called on instantion 
@@ -32,6 +33,9 @@ public class Stream : MonoBehaviour {
         // Update the particles color 
         var main = splashParticle.main;
         main.startColor = color;
+
+        // Set this color 
+        this.color = color;
     }
 
     public void Begin() {
@@ -78,6 +82,12 @@ public class Stream : MonoBehaviour {
         // Find end position of stream 
         Physics.Raycast(ray, out hit, flow_distance);
         Vector3 endPoint = hit.collider ? hit.point : ray.GetPoint(flow_distance);
+
+        // Check if ray cast hit is a liquid 
+        if (hit.collider && hit.transform.gameObject.GetComponent<Liquid>()) {
+            // Add to the cups liquid 
+            hit.transform.gameObject.GetComponent<Liquid>().AddLiquid(this.color);
+        }
 
         return endPoint;
     }

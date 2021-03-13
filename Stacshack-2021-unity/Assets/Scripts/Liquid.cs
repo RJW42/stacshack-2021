@@ -12,6 +12,9 @@ public class Liquid : MonoBehaviour
     float max_height = -1f;
     float radious = 0.25f;
 
+    float wait_time = 0.01f;
+    float timer = 0f; 
+
     Vector4[] top_verticies;
 
     void Start(){
@@ -56,6 +59,42 @@ public class Liquid : MonoBehaviour
         this.UpdateVerticies();    
     }
 
+
+    public void AddLiquid(Color color) {
+        // Check last time of update 
+        this.timer += Time.deltaTime;
+
+        // Add some liquid to this cup 
+        if(this.fill_amount < 1f && this.timer > this.wait_time) {
+            // Update the amount of liquid 
+            this.fill_amount += 0.01f;
+            this.timer = 0f;
+
+            // Update the color of the liquid 
+            Material mat = gameObject.GetComponent<Renderer>().material;
+
+            Color current_col = mat.color;
+            Color new_col = BlendColors(current_col, color, 0.01f);
+
+            mat.SetColor("_Color", new_col);
+
+
+        }
+    }
+
+    Color BlendColors(Color current_col, Color new_color, float new_liquid) {
+        // Calculate the percentages for each color 
+        float old_percentage = (this.fill_amount - new_liquid) / this.fill_amount;
+        float new_percentage = (new_liquid) / this.fill_amount;
+
+        // Calculate new color value 
+        float r = (new_color.r * new_percentage) + (current_col.r * old_percentage);
+        float g = (new_color.g * new_percentage) + (current_col.g * old_percentage);
+        float b = (new_color.b * new_percentage) + (current_col.b * old_percentage);
+        float a = (new_color.a);
+
+        return new Color(r, g, b, a);
+    }
 
     void UpdateVerticies() {
         // Get mesh verticies 
