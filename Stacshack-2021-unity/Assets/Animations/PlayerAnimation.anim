@@ -2622,8 +2622,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: skin (64x32)/Cube.000
+    attribute: m_LocalEulerAngles.z
+    path: skin (64x64)/Cube.005
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2633,7 +2633,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: skin (64x32)/Cube.000
+    path: skin (64x64)/Cube.005
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2642,8 +2642,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: skin (64x32)/Cube.000
+    attribute: m_LocalEulerAngles.x
+    path: skin (64x64)/Cube.005
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2713,7 +2713,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: skin (64x32)/Cube.003
+    path: skin (64x32)/Cube.000
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2723,7 +2723,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: skin (64x32)/Cube.003
+    path: skin (64x32)/Cube.000
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2733,7 +2733,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: skin (64x32)/Cube.003
+    path: skin (64x32)/Cube.000
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2863,7 +2863,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: skin (64x64)/Cube.005
+    path: skin (64x32)/Cube.003
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2873,7 +2873,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: skin (64x64)/Cube.005
+    path: skin (64x32)/Cube.003
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2883,7 +2883,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: skin (64x64)/Cube.005
+    path: skin (64x32)/Cube.003
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

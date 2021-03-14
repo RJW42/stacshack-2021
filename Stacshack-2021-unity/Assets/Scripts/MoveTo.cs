@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class MoveTo : MonoBehaviour{
+    // The move animator
+    public Animator moveAnimator;
+
     // Keep track of if we are moving 
     bool moving = false;
 
@@ -21,6 +24,9 @@ public class MoveTo : MonoBehaviour{
         // Set moving to true 
         this.moving = true;
 
+        // Start the move animation
+        this.moveAnimator.enabled = true;
+
         // Store call back 
         this.callback = callback;
         this.callback_arg = callback_arg;
@@ -37,6 +43,9 @@ public class MoveTo : MonoBehaviour{
                     if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f) {
                         // Reached our goal location 
                         this.moving = false;
+
+                        // Stop the move animation
+                        this.moveAnimator.enabled = false;
 
                         // Call back to A.I to let know the goal has been achinved 
                         this.callback(this.callback_arg);

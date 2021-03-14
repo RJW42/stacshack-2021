@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
  public class AI : MonoBehaviour {
@@ -24,10 +25,19 @@ using UnityEngine;
     // Store the NPCs drink 
     public GameObject drink = null;
 
+    // Keep track of death prefab 
+    public GameObject death_prefab;
+
+    // Keep track of npc animations 
+    public RuntimeAnimatorController no_controller;
+    public RuntimeAnimatorController walk_controller;
 
     // Current State of the AI
     public AIStateType current_state;
 
+    bool bad_drink_recived = false;
+    float time_since_animation = 0f;
+    float time_of_animation = 1f;
 
     // Start is called before the first frame update
     void Start() {
@@ -47,6 +57,23 @@ using UnityEngine;
     void Update() {
         // Reduce The Ai's thirs 
         this.thirst -= this.thirst_reduce_rate * Time.deltaTime;
+
+        // Turn off the no animation 
+        if (this.bad_drink_recived) {
+            if(this.time_since_animation > this.time_of_animation) {
+                // Get the animator 
+                Animator animator = gameObject.GetComponent<Animator>();
+
+                animator.runtimeAnimatorController = this.walk_controller;
+                animator.enabled = false;
+
+                this.bad_drink_recived = false;
+                this.time_since_animation = 0f;
+            }
+            else {
+                this.time_since_animation += Time.deltaTime;
+            }
+        }
 
         // Handle the state 
         this.HandleState();
@@ -154,10 +181,13 @@ using UnityEngine;
                 // Check if the npc is holding a drink 
                 if (this.drink != null) {
                     // Need to put away the drink 
-                    this.Move(this.deposite_location, AIStateType.deposit_drink);
+
+                    // Request permission to drop of drink from bar 
+                    if(this.barManger.GetComponent<Bar>().RequestDropoff()){
+                        this.Move(this.deposite_location, AIStateType.deposit_drink);
+                    }
                 }
                 else if (this.barManger.GetComponent<Bar>().RequestSpace()) {
-                    print("thirst");
                     // Npc not holding a drink. And there is a space at the bar 
 
                     // Move to the bar 
@@ -170,7 +200,7 @@ using UnityEngine;
 
     void Order() {
         // Order a drink 
-        this.barManger.GetComponent<Bar>().OrderDrink(new System.Action<AIStateType>(this.UpdateState), AIStateType.order_complete);
+        this.barManger.GetComponent<Bar>().OrderDrink(new System.Action<AIStateType>(this.UpdateState), new System.Action(this.BadDrink), AIStateType.order_complete);
 
         // Update to waiting for order 
         this.UpdateState(AIStateType.waiting_for_order);
@@ -201,6 +231,12 @@ using UnityEngine;
         // Remove the drink from the npc
         this.drink.transform.parent = null;
         this.drink.GetComponent<Rigidbody>().isKinematic = false;
+
+        // Tell bar we have dropped off drink
+        this.barManger.GetComponent<Bar>().DropOffDrink();
+
+        // Set drink to null
+        this.drink = null;
 
         // Change state
         UpdateState(AIStateType.deposited_drink);
@@ -268,7 +304,29 @@ using UnityEngine;
     }
 
 
+    void BadDrink() {
+        // Set animation to no 
+        if (!this.bad_drink_recived) {
+            // Set no animation
+            this.bad_drink_recived = true;
+
+            // Get the animator 
+            Animator animator = gameObject.GetComponent<Animator>();
+
+            animator.runtimeAnimatorController = this.no_controller;
+            animator.enabled = true;
+        }
+    }
+
     void Die() {
+        // Create a death prefab 
+        GameObject death = Instantiate(this.death_prefab);
+
+        death.transform.position = transform.position;
+        death.GetComponent<Dead>().username = GetComponent<SkinUpdator>().username;
+        death.GetComponent<Dead>().Refresh();
+
+        // Detroy this object 
         Destroy(this.gameObject);
     }
  }
