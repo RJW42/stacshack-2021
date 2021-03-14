@@ -22447,7 +22447,7 @@ PrefabInstance:
     - target: {fileID: 4976928956142364605, guid: 3dfd5dc4175d49f4d9dda8e9926045e6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.4
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4976928956142364605, guid: 3dfd5dc4175d49f4d9dda8e9926045e6,
         type: 3}
@@ -26256,7 +26256,7 @@ PrefabInstance:
     - target: {fileID: 4976928956142364605, guid: 3dfd5dc4175d49f4d9dda8e9926045e6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.7
+      value: -5.85
       objectReference: {fileID: 0}
     - target: {fileID: 4976928956142364605, guid: 3dfd5dc4175d49f4d9dda8e9926045e6,
         type: 3}
@@ -26986,6 +26986,10 @@ PrefabInstance:
       propertyPath: deposite_location
       value: 
       objectReference: {fileID: 639371197}
+    - target: {fileID: 1044527068, guid: 3dfd5dc4175d49f4d9dda8e9926045e6, type: 3}
+      propertyPath: thirst_reduce_rate
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 658343291937291375, guid: 3dfd5dc4175d49f4d9dda8e9926045e6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -27034,7 +27038,7 @@ PrefabInstance:
     - target: {fileID: 4976928956142364605, guid: 3dfd5dc4175d49f4d9dda8e9926045e6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.45
+      value: -3.3500001
       objectReference: {fileID: 0}
     - target: {fileID: 4976928956142364605, guid: 3dfd5dc4175d49f4d9dda8e9926045e6,
         type: 3}
