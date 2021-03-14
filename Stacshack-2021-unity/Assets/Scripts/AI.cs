@@ -13,10 +13,10 @@ using UnityEngine;
     public float time_between_gulps = 2f;
     public float time_of_last_gulp = 0f;
 
+    public Transform idle_location;
     public Transform order_location;
     public Transform deposite_location;
     public GameObject locationManager;
-
 
     public MoveTo moveTo;
     public GameObject barManger;
@@ -37,7 +37,9 @@ using UnityEngine;
         // Get free idle location
 
         // Move to idle location
-        this.Move(this.locationManager.GetComponent<LocationController>().getIdleLocation(), AIStateType.idle);
+        this.idle_location = this.locationManager.GetComponent<LocationController>().getIdleLocation();
+
+        this.Move(this.idle_location, AIStateType.idle);
     }
 
 
@@ -52,6 +54,12 @@ using UnityEngine;
 
 
     void UpdateState(AIStateType new_type) {
+        // Check if switching from idle 
+        if(this.current_state == AIStateType.idle && new_type != AIStateType.idle) {
+            // Set the location to three 
+            this.locationManager.GetComponent<LocationController>().leaveIdleLocation(this.idle_location);
+        }
+
         // Decide how to handle this state transition 
         switch (new_type) {
             case AIStateType.idle : {
@@ -184,7 +192,9 @@ using UnityEngine;
         this.drink = drink;
 
         // Move back to idle 
-        this.Move(this.locationManager.GetComponent<LocationController>().getIdleLocation(), AIStateType.idle);
+        this.idle_location = this.locationManager.GetComponent<LocationController>().getIdleLocation();
+
+        this.Move(this.idle_location, AIStateType.idle);
     }
 
     void DepositDrink() {
@@ -207,12 +217,16 @@ using UnityEngine;
             }
             else {
                 // Can't so return to idle 
-                this.Move(this.locationManager.GetComponent<LocationController>().getIdleLocation(), AIStateType.idle);
+                this.idle_location = this.locationManager.GetComponent<LocationController>().getIdleLocation();
+
+                this.Move(this.idle_location, AIStateType.idle);
             }
         }
         else {
             // Not thirsty so idle
-            this.Move(this.locationManager.GetComponent<LocationController>().getIdleLocation(), AIStateType.idle);
+            this.idle_location = this.locationManager.GetComponent<LocationController>().getIdleLocation();
+
+            this.Move(this.idle_location, AIStateType.idle);
         }
     }
 
@@ -229,6 +243,11 @@ using UnityEngine;
     void Drink() {
         // Check if we can gulp
         if(this.time_of_last_gulp > this.time_between_gulps) {
+            // Check if the liquid is poisen
+            if (this.drink.GetComponentInChildren<Liquid>().isPoisen) {
+                Die();
+            }
+
             // Add drink
             this.thirst += gulp_rate * 2f;
             this.time_of_last_gulp = 0;
@@ -246,6 +265,11 @@ using UnityEngine;
             // Increment last gulp time 
             this.time_of_last_gulp += Time.deltaTime;
         }
+    }
+
+
+    void Die() {
+        Destroy(this.gameObject);
     }
  }
 

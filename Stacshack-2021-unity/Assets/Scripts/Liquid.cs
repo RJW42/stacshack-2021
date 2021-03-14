@@ -9,6 +9,7 @@ public class Liquid : MonoBehaviour
     public MeshRenderer meshRenderer;
     public GameObject cup;
     public float fill_amount = 0.5f;
+    public bool isPoisen = false;
 
     float max_height = -1f;
     float radious = 0.25f;
@@ -71,7 +72,13 @@ public class Liquid : MonoBehaviour
     }
 
 
-    public void AddLiquid(Color color, float fill_speed) {
+    public void AddLiquid(Color color, float fill_speed, bool is_poisen) {
+        // Check if drink already poisend 
+        if (is_poisen) {
+            this.isPoisen = true;
+        }
+
+
         // Check last time of update 
         this.timer += Time.deltaTime;
 

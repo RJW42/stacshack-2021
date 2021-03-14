@@ -27,11 +27,22 @@ public class LocationController : MonoBehaviour
     public Transform getIdleLocation() {
         for(int i =0; i < idle_locations.Length; i++) {
             if ( idle_locations[i].state == IdleLocationState.emtpy) {
+                idle_locations[i].state = IdleLocationState.taken;
+
                 return idle_locations[i].gameObject.transform;
             }
         }
 
         return null;
+    }
+
+
+    public void leaveIdleLocation(Transform location) {
+        for (int i = 0; i < idle_locations.Length; i++) {
+            if (idle_locations[i].gameObject.transform == location) {
+                idle_locations[i].state = IdleLocationState.emtpy;
+            }
+        }
     }
 
     // Update is called once per frame
