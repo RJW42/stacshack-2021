@@ -1,5 +1,238 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &175217640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 175217641}
+  - component: {fileID: 175217644}
+  - component: {fileID: 175217643}
+  - component: {fileID: 175217642}
+  m_Layer: 0
+  m_Name: Order Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 1
+  m_IsActive: 1
+--- !u!4 &175217641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175217640}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.55, y: 4.076745, z: 3.0720296}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 717943602}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &175217644
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175217640}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &175217643
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175217640}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!135 &175217642
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175217640}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &639371196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639371197}
+  - component: {fileID: 639371200}
+  - component: {fileID: 639371199}
+  - component: {fileID: 639371198}
+  m_Layer: 0
+  m_Name: Deposit Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 1
+  m_IsActive: 1
+--- !u!4 &639371197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639371196}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.3000002, y: 4.076745, z: 3.0720296}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 717943602}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &639371200
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639371196}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &639371199
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639371196}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!135 &639371198
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639371196}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &717943600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717943602}
+  - component: {fileID: 717943601}
+  m_Layer: 0
+  m_Name: Bar Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &717943602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717943600}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.98, y: -2.3767452, z: -7.4220295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 175217641}
+  - {fileID: 639371197}
+  m_Father: {fileID: 4168876836461569712}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &717943601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717943600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0888887d7e69e164483ad5166eb2a2db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenOrders: 2
+  timeOfLastOrder: 0
 --- !u!1 &2750256278761860192
 GameObject:
   m_ObjectHideFlags: 0
@@ -18,7 +251,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2750256278761860195
 Transform:
@@ -1289,7 +1522,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2750256278806981510
 Transform:
@@ -1595,12 +1828,14 @@ GameObject:
   - component: {fileID: 2750256279132314502}
   - component: {fileID: 2750256279132314503}
   - component: {fileID: 2750256279132314500}
+  - component: {fileID: 1984850295}
+  - component: {fileID: 1984850294}
   m_Layer: 0
   m_Name: FinishedBin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2750256279132314501
 Transform:
@@ -2853,6 +3088,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &1984850295
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2750256279132314506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.125, z: 1}
+  m_Center: {x: 0.5, y: 0.0625, z: -0.5}
+--- !u!114 &1984850294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2750256279132314506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573d14dee61d8a849be57ddf8fad4246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barManager: {fileID: 717943600}
 --- !u!1 &2750256279356174782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +3132,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2750256279356174773
 Transform:
@@ -3208,7 +3469,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2750256279393211602
 Transform:
@@ -3519,7 +3780,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2750256279707494769
 Transform:
@@ -4314,7 +4575,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4168876836294726939
 Transform:
@@ -4543,17 +4804,9 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
-  m_SelectedFaces: 00000000
-  m_SelectedEdges:
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  m_SelectedVertices: 00000000000000000000000000000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &4168876836294726918
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4633,7 +4886,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4168876836334598361
 Transform:
@@ -5423,12 +5676,13 @@ GameObject:
   - component: {fileID: 4168876836461569718}
   - component: {fileID: 4168876836461569717}
   - component: {fileID: 4168876836461569716}
+  - component: {fileID: 1470582819}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4168876836461569712
 Transform:
@@ -5446,6 +5700,7 @@ Transform:
   - {fileID: 4168876836700148727}
   - {fileID: 4168876836294726939}
   - {fileID: 4168876836334598361}
+  - {fileID: 717943602}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5726,6 +5981,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!54 &1470582819
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4168876836461569675}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4168876836700148726
 GameObject:
   m_ObjectHideFlags: 0
@@ -5744,7 +6015,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4168876836700148727
 Transform:
@@ -6055,7 +6326,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4168876837077429421
 Transform:
@@ -6366,7 +6637,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4168876837642251689
 Transform:
@@ -6668,6 +6939,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -6732,6 +7007,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -6764,6 +7044,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -6828,6 +7112,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -6860,6 +7149,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -6924,6 +7217,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -6956,6 +7254,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7020,6 +7322,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -7052,6 +7359,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7116,6 +7427,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -7148,6 +7464,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7212,6 +7532,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -7244,6 +7569,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7308,6 +7637,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -7340,6 +7674,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7404,6 +7742,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -7436,6 +7779,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7500,6 +7847,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -7532,6 +7884,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7596,6 +7952,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -7628,6 +7989,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7692,6 +8057,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -7724,6 +8094,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7788,6 +8162,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -7820,6 +8199,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7884,6 +8267,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -7916,6 +8304,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7980,6 +8372,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -8012,6 +8409,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8076,6 +8477,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -8108,6 +8514,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8172,6 +8582,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -8204,6 +8619,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8268,6 +8687,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -8300,6 +8724,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8364,6 +8792,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -8396,6 +8829,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8460,6 +8897,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -8492,6 +8934,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8556,6 +9002,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -8588,6 +9039,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8652,6 +9107,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -8684,6 +9144,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8748,6 +9212,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -8780,6 +9249,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8844,6 +9317,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}
       propertyPath: liquid_color.b
@@ -8876,6 +9354,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2750256279356174773}
     m_Modifications:
+    - target: {fileID: 530155296, guid: ae730c889307431419694ebc100ec129, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1090405325, guid: ae730c889307431419694ebc100ec129, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8939,6 +9421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899295881952507124, guid: ae730c889307431419694ebc100ec129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8296172667879750249, guid: ae730c889307431419694ebc100ec129,
         type: 3}

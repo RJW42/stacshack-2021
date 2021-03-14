@@ -17,7 +17,7 @@ public class LocationController : MonoBehaviour
         for(int i = 0; i < idleLocationObject.transform.childCount; i++) {
             
             idle_locations = idleLocationObject.transform.GetComponentsInChildren<IdleLocation>();
-            
+           
         }
 
         
@@ -25,7 +25,7 @@ public class LocationController : MonoBehaviour
 
     // This will return an idle location for the obejct to travel to
     public Transform getIdleLocation() {
-        for(int i =0; i < idleLocationObject.transform.childCount; i++) {
+        for(int i =0; i < idle_locations.Length; i++) {
             if ( idle_locations[i].state == IdleLocationState.emtpy) {
                 return idle_locations[i].gameObject.transform;
             }

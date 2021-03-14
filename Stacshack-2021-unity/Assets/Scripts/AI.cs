@@ -26,7 +26,7 @@ using UnityEngine;
 
 
     // Current State of the AI
-    AIStateType current_state;
+    public AIStateType current_state;
 
 
     // Start is called before the first frame update
@@ -149,6 +149,7 @@ using UnityEngine;
                     this.Move(this.deposite_location, AIStateType.deposit_drink);
                 }
                 else if (this.barManger.GetComponent<Bar>().RequestSpace()) {
+                    print("thirst");
                     // Npc not holding a drink. And there is a space at the bar 
 
                     // Move to the bar 

@@ -152,9 +152,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thirst: 0
-  idle_location: {fileID: 0}
+  thirst_threshold: 0.25
+  thirst_reduce_rate: 0.01
+  gulp_rate: 0.05
+  time_between_gulps: 2
+  time_of_last_gulp: 0
   order_location: {fileID: 0}
+  deposite_location: {fileID: 0}
+  locationManager: {fileID: 0}
   moveTo: {fileID: 1044527062}
+  barManger: {fileID: 0}
+  drink: {fileID: 0}
+  current_state: 0
 --- !u!1001 &4976928955151516423
 PrefabInstance:
   m_ObjectHideFlags: 0
