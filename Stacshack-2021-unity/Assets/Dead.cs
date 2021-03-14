@@ -4,6 +4,7 @@ using System.Security.Cryptography;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -13,14 +14,33 @@ public class Dead : MonoBehaviour {
 	public GameObject player64x64;
 	public GameObject playerSlim;
 
+	public float creation_time = 0f;
+	public float time_before_transition = 2f;
+
+	public string transition_name;
 	public string username;
 	public float speed = 2f;
+	public bool loaded_scene = false;
 
 	private Texture2D skin;
 	private string lastVerifiedUsername;
 
 	void Start() {
 		this.Refresh();
+	}
+
+	void Update() {
+		if(this.creation_time >= this.time_before_transition) {
+			if (this.loaded_scene) {
+				// Transition scene 
+				SceneManager.LoadScene(this.transition_name);
+				print(this.transition_name);
+				this.loaded_scene = true;
+			}
+		}
+		else {
+			this.creation_time += Time.deltaTime;
+		}
 	}
 
 	public void Refresh() {

@@ -8,6 +8,7 @@ public class PourDetector : MonoBehaviour {
     public GameObject streamPrefab = null;
     public Color liquid_color;
     public bool isPoisen = false;
+    public AudioSource sound_affect;
 
     private bool isPouring = false;
     private Stream currentStream = null;
@@ -16,6 +17,7 @@ public class PourDetector : MonoBehaviour {
     void Start() {
         // Set the color of the bottle 
         this.SetColor();
+        this.sound_affect = GetComponent<AudioSource>();
     }
 
 
@@ -45,6 +47,9 @@ public class PourDetector : MonoBehaviour {
 
     
     void StartPour() {
+        // Play sound 
+        sound_affect.Play();
+
         currentStream = CreateStream();
         currentStream.Begin();
         currentStream.SetColor(this.liquid_color);
@@ -53,6 +58,9 @@ public class PourDetector : MonoBehaviour {
 
 
     void EndPour() {
+        // Stop play 
+        sound_affect.Stop();
+
         currentStream.End();
         currentStream = null;
     }

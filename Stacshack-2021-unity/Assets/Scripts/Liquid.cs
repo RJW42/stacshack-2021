@@ -10,6 +10,8 @@ public class Liquid : MonoBehaviour
     public GameObject cup;
     public float fill_amount = 0.5f;
     public bool isPoisen = false;
+    public Color startColor;
+    public bool useStartColor = false;
 
     float max_height = -1f;
     float radious = 0.25f;
@@ -20,6 +22,12 @@ public class Liquid : MonoBehaviour
     Vector4[] top_verticies;
 
     void Start(){
+        // Add start color
+        if(this.useStartColor) {
+            Material mat = gameObject.GetComponent<Renderer>().material;
+            mat.SetColor("_Color", this.startColor);
+        }
+
         // Get the cup height 
         Mesh parent_mesh = this.cup.GetComponent<MeshFilter>().mesh;
 

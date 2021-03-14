@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
- public class AI : MonoBehaviour {
+public class AI : MonoBehaviour {
 
     // Thirst level of the AI
     [Range(0, 1)]
@@ -19,6 +21,9 @@ using UnityEngine;
     public Transform deposite_location;
     public GameObject locationManager;
 
+    public string WinScene = "Win";
+    public string LoseScene = "Loose";
+
     public MoveTo moveTo;
     public GameObject barManger;
 
@@ -31,6 +36,8 @@ using UnityEngine;
     // Keep track of npc animations 
     public RuntimeAnimatorController no_controller;
     public RuntimeAnimatorController walk_controller;
+
+    public bool is_target = false;
 
     // Current State of the AI
     public AIStateType current_state;
@@ -321,9 +328,13 @@ using UnityEngine;
     void Die() {
         // Create a death prefab 
         GameObject death = Instantiate(this.death_prefab);
+        string transition_name = (this.is_target) ? this.WinScene : this.LoseScene;
+
+        GetComponent<AudioSource>().Play();
 
         death.transform.position = transform.position;
         death.GetComponent<Dead>().username = GetComponent<SkinUpdator>().username;
+        death.GetComponent<Dead>().transition_name = transition_name;
         death.GetComponent<Dead>().Refresh();
 
         // Detroy this object 

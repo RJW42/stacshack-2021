@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/RoomAIBackup2.unity
+    guid: edbe26b1b7e423c448ecca5d51d6acf0
+  - enabled: 1
+    path: Assets/Scenes/Loose.unity
+    guid: 29eb771d44ad54747b073816dc3c2db2
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: e3cc2e390d5c80d428e195f5cabe5c78
   m_configObjects: {}
